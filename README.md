@@ -5,7 +5,9 @@
 
 Repository for the code and the data produced during the analysis described in the article "Extensive fragmentation and re-distribution of gene co-expression patterns underlie the progression of Systemic Lupus Erythematosus"
 
-[Description of the data](#description) | [Description of the code](#code) | [Cite](#cite)
+⋅⋅* [Description of the data](#description) 
+⋅⋅* [Description of the code](#code)
+⋅⋅* [Cite](#cite)
 
 ## Description of the data<a name="description"></a>
 In this work, we have ananlyzed an whole blood RNAseq dataset 
