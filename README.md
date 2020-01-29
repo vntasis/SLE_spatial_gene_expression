@@ -11,13 +11,23 @@ Repository for the code and the data produced during the analysis described in t
 In this work, we have ananlyzed an RNAseq dataset (Panoussis et al., 2019)
 of a large cohort of Systemic Lupus Erythematosus (SLE) patients and
 a control group of healthy individuals. We studied gene expression 
-from an 'architectural' point of view, by measuring gene expression
+from an "architectural" point of view, by measuring gene expression
 correlation in a chromosome-wise manner. We statistically evaluated
 these correlation values by implementing a robust permutation test 
 (x1000). Based on that, we detected 'Domains of Co-ordinated 
 expression' (DCEs), as genomic regions with high correlation values
 in the interior part and lower correlation with their respective 
 neighbourhood.
+
+We performed this analysis for the healthy group and three SLE groups
+of increasing disease activity/severity. The results indicate an
+extensive reorganization of co-expression patterns in
+patients compared to healthy individuals. We further classified these
+changes into different structural "events" (e.g. depleted, emerged, 
+split) followed by finding associations between those and SLE 
+disease specific traits, like disease activity or severe 
+manifestations (e.g. nephritis). 
+
 
 ## Description of the code<a name="code"></a>
 The analysis has been performed in R. All the code used to define, 
