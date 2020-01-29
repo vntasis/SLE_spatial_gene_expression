@@ -37,7 +37,7 @@ significant role for genome organization in the development and
 progression of SLE, providing insights that will enhance our 
 understanding for this complex disease.  
 
-In this repository, the results of our work are provided. Bed files
+The results of our work are provided in this repository. Bed files
 containing the DCEs genomic coordinates per group studied have been
 stored inside the [Data](https://github.com/vntasis/SLE_spatial_gene_expression/blob/master/Data/)
 folder. The different DCE classes, as well as the Differentialy
