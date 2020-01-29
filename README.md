@@ -33,7 +33,14 @@ of the low activity SLE group are enriched in the Interferon and
 other SLE susceptibility signatures. In summary, our work suggests a
 significant role for genome organization in the development and 
 progression of SLE, providing insights that will enhance our 
-understanding on this complex disease.  
+understanding for this complex disease.  
+
+In this repository, the results of our work are provided. Inside
+the [Data](https://github.com/vntasis/SLE_spatial_gene_expression/blob/master/Data/)
+folder have been stored bed files containing the DCEs genomic 
+coordinates per group studied. The different DCE classes, as well as
+the Differentialy expressed genes (DEGs) as identified by our analysis
+are also available. 
 
 ## Description of the code<a name="code"></a>
 The analysis has been performed in R. All the code used to define, 
