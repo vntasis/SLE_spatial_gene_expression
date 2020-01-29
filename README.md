@@ -9,4 +9,7 @@ Repository for the code and the data produced during the analysis described in t
 
 ## Description of the data<a name="description"></a>
 ## Description of the code<a name="code"></a>
+The analysis has been performed in R. All the code used to define, 
+detect and anaylise DCEs can be found inside the [scripts](https://github.com/vntasis/SLE_spatial_gene_expression/blob/master/)
+folder. 
 ## Cite<a name="cite"></a>
