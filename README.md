@@ -49,3 +49,7 @@ The analysis has been performed in R. All the code used to define,
 detect and anaylize DCEs can be found inside the [scripts](https://github.com/vntasis/SLE_spatial_gene_expression/blob/master/scripts/)
 folder.
 ## Cite<a name="cite"></a>
+Vasilis F. Ntasis, Nikolaos I. Panousis, Maria G. Tektonidou, Emmanouil T. Dermitzakis,
+Dimitrios T. Boumpas, George K. Bertsias, and Christoforos Nikolaou, Extensive fragmentation
+and re-organization of gene co-expression patterns underlie the progression of systemic lupus
+erythematosus, bioRxiv (2020) doi: https://doi.org/10.1101/2020.01.28.922559.
