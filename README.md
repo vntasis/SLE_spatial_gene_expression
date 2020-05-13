@@ -3,7 +3,7 @@
 # Extensive spatial fragmentation and re-organization of transcription in Systemic Lupus Erythematosus
 
 
-Repository for the code and the data produced during the analysis described in the article "Extensive spatial fragmentation and re-organization of transcription in Systemic Lupus Erythematosus"
+Repository for the code and data produced during the analysis described in the article "Extensive spatial fragmentation and re-organization of transcription in Systemic Lupus Erythematosus"
 
 * [Description of the data](#description) 
 * [Description of the code](#code)
