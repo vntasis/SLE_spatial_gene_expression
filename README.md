@@ -1,9 +1,9 @@
 [![Creative Commons License](http://i.creativecommons.org/l/by/4.0/80x15.png)](https://github.com/vntasis/SLE_spatial_gene_expression/blob/master/LICENSE)
 
-# Extensive fragmentation and re-distribution of gene co-expression patterns underlie the progression of Systemic Lupus Erythematosus
+# Extensive spatial fragmentation and re-organization of transcription in Systemic Lupus Erythematosus
 
 
-Repository for the code and the data produced during the analysis described in the article "Extensive fragmentation and re-distribution of gene co-expression patterns underlie the progression of Systemic Lupus Erythematosus"
+Repository for the code and the data produced during the analysis described in the article "Extensive spatial fragmentation and re-organization of transcription in Systemic Lupus Erythematosus"
 
 * [Description of the data](#description) 
 * [Description of the code](#code)
@@ -50,6 +50,4 @@ detect and anaylize DCEs can be found inside the [scripts](https://github.com/vn
 folder.
 ## Cite<a name="cite"></a>
 Vasilis F. Ntasis, Nikolaos I. Panousis, Maria G. Tektonidou, Emmanouil T. Dermitzakis,
-Dimitrios T. Boumpas, George K. Bertsias, and Christoforos Nikolaou, Extensive fragmentation
-and re-organization of gene co-expression patterns underlie the progression of systemic lupus
-erythematosus, bioRxiv (2020) doi: https://doi.org/10.1101/2020.01.28.922559.
+Dimitrios T. Boumpas, George K. Bertsias, and Christoforos Nikolaou, Extensive spatial fragmentation and re-organization of transcription in Systemic Lupus Erythematosus, bioRxiv (2020) doi: https://doi.org/10.1101/2020.01.28.922559.
