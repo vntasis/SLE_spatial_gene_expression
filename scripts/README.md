@@ -1,4 +1,4 @@
-# Contents
+# Content
 
 - DCE_detection: Contains all the scripts required for the identification of DCEs, 
 i.e. the detection of their boundary coordinates,
