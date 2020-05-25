@@ -5,12 +5,13 @@ library(parallel)
 library(features)
 
 # source all the required functions and prepare the data
-filenames <- c('data_preparation.R', 
-              'calculate_correlations.R', 
-              'permutation_test_for_correlations.R',
-              'compute_binsignal.R', 
-              'detect_DCEs.R', 
-              'merge_DCEs.R')
+filenames <- c('Initial_filtering.R',
+               'data_preparation.R',
+               'calculate_correlations.R',
+               'permutation_test_for_correlations.R',
+               'compute_binsignal.R',
+               'detect_DCEs.R',
+               'merge_DCEs.R')
 sapply(filenames, source, echo = T)
 
 # Calculate correlation matrix
@@ -23,23 +24,23 @@ cor_final_da3 <- calc_cor_final(bin_counts = bin_counts_da3)
 
 # Calculate permutation scores
 system.time(
-  permutation_scores_healthy <- mclapply(X = chrs, FUN = permutations, n_of_permutations = 1000, correlation = cor, 
+  permutation_scores_healthy <- mclapply(X = chrs, FUN = permutations, n_of_permutations = 1000, correlation = cor,
                                          bin_counts = bin_counts_healthy, cor_final = cor_final_healthy, mc.cores = 4)
 )
 
 
 system.time(
-  permutation_scores_da1 <- mclapply(X = chrs, FUN = permutations, n_of_permutations = 1000, correlation = cor, 
+  permutation_scores_da1 <- mclapply(X = chrs, FUN = permutations, n_of_permutations = 1000, correlation = cor,
                                      bin_counts = bin_counts_da1, cor_final = cor_final_da1, mc.cores = 4)
 )
 
 system.time(
-  permutation_scores_da2 <- mclapply(X = chrs, FUN = permutations, n_of_permutations = 1000, correlation = cor, 
+  permutation_scores_da2 <- mclapply(X = chrs, FUN = permutations, n_of_permutations = 1000, correlation = cor,
                                      bin_counts = bin_counts_da2, cor_final = cor_final_da2, mc.cores = 4)
 )
 
 system.time(
-  permutation_scores_da3 <- mclapply(X = chrs, FUN = permutations, n_of_permutations = 1000, correlation = cor, 
+  permutation_scores_da3 <- mclapply(X = chrs, FUN = permutations, n_of_permutations = 1000, correlation = cor,
                                      bin_counts = bin_counts_da3, cor_final = cor_final_da3, mc.cores = 4)
 )
 
@@ -77,7 +78,7 @@ test_for_window <- function(windows, chr, group){
   intra_cod <- list()
   for (w in windows){
     print(w)
-    cods <- codfinder(chr = chr, group = group, window.size = w, bin_signal_thres = 0.25, 
+    cods <- codfinder(chr = chr, group = group, window.size = w, bin_signal_thres = 0.25,
                       perm_pvalue_thres = 0.05)
     cods <- cods$CODs
     cods <- cod_merge(cods, interfere = 2, group = group, chr = chr, permut_thres = 0.05)
@@ -103,7 +104,7 @@ make_COD_list <- function(group, window.size, chrs){
   bin_signals[[group]] <- list()
   for (chr in chrs){
     print(chr)
-    c <- codfinder(chr, group, window.size, bin_signal_thres = 0.25, 
+    c <- codfinder(chr, group, window.size, bin_signal_thres = 0.25,
                    perm_pvalue_thres = 0.05)
     cods[[chr]] <- c$CODs
     bin_signals[[group]][[chr]] <- c$bin_signal
@@ -120,7 +121,7 @@ merge_cods <- function(cod_list, group){
     cod_list[[i]] <- cod_merge(cod_list[[i]], 2, group, names(cod_list)[[i]], 0.05)
   }
   cod_list
-} 
+}
 CODs$healthy <- merge_cods(CODs$healthy, 'healthy')
 
 CODs[['da1']] <- make_COD_list('da1', 3, chrs)
@@ -140,7 +141,7 @@ coCODs <- function(cods){
     for (chr in names(cods[[1]])){
       c_CODs[[group]][[chr]] <- matrix(0, nrow(cods[[group]][[chr]]), ncol(cods[[group]][[chr]]), dimnames = list(NULL, c("START", "END")))
       bin_starts <- bin_starts <- as.numeric(rownames(bin_signals[[group]][[chr]]))
-      
+
       c_CODs[[group]][[chr]][,"START"] <- bin_starts[cods[[group]][[chr]][,"START"]]
       c_CODs[[group]][[chr]][,"END"] <- bin_starts[cods[[group]][[chr]][,"END"]]+9999
     }
